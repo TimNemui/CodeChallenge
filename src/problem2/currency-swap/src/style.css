@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Helvetica, Arial, sans-serif;
+  position: relative; 
+  background: white; 
+  overflow: hidden;
+}
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh; 
+  background: #0a1469;
+  z-index: -1;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  width: 120%; 
+  height: 40vh; 
+  background: white;
+  border-radius: 50% 50% 0 0; 
+  z-index: -1;
+}
+
+
+#app {
+  width: 90%;
+  max-width: 1200px;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+}
+
+.exchange-card {
+  background: white;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  overflow: clip;
+}
+
+.exchange-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2.5rem 0 1rem 0;
+  gap: 3rem;                   
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+
+.token-section {
+  flex: 1;
+  min-width: 360px;
+  max-width: 440px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 1rem;
+  background: #fafafa;
+}
+
+.amount-section {
+  flex-basis: 60%;                  
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 1.5rem;            
+  overflow: clip;
+}
+
+
+.amount-section label {
+  color: #777;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.amount-section input[type="number"] {
+  border: none;
+  background: transparent;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  outline: none;
+  width: 100%;
+}
+
+.amount-section input[type="number"]::placeholder {
+  color: #bbb;
+}
+
+.selector-section {
+  flex-basis: 30%;                  
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  overflow: clip;
+
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  padding: 3px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.selector-section select {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  overflow: clip;
+}
+
+/* Swap button */
+#swap-btn {
+  
+  position: absolute;
+  rotate: 90deg;
+  width: 40px;
+  height: 40px;
+  border-radius: 90%;
+  background: white;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  font-size: 1.6rem;
+  color: #667eea;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s ease;
+}
+
+#swap-btn:hover {
+  transform: scale(1.11);
+}
+
+.rate {
+  padding: 0 0 1.5rem 5rem;
+  text-align: left;
+  color: #272727;
+  font-size: 1.1rem;
+  font-weight: 600;
+}

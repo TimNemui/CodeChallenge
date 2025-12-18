@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currency Swap</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>Currency Exchange</h1>
+
+    <div class="exchange-card">
+      <div class="exchange-row">
+        <!-- From Side -->
+        <div class="token-section">
+          <div class="amount-section">
+            <label>From</label>
+            <input id="from-amount" type="number" placeholder="0.000" min="0" step="0.01" />
+          </div>
+          <div class="selector-section">
+            <img id="from-icon" src="" alt="" class="icon" />
+            <select id="from-currency"></select>
+          </div>
+        </div>
+
+        <!-- Swap Button -->
+        <button id="swap-btn">⇅</button>
+
+        <!-- To Side -->
+        <div class="token-section">
+          <div class="amount-section">
+            <label>To</label>
+            <input id="to-amount" type="number" placeholder="0.00" readonly />
+          </div>
+          <div class="selector-section">
+            <img id="to-icon" src="" alt="" class="icon" />
+            <select id="to-currency"></select>
+          </div>
+        </div>
+      </div>
+
+      <p id="rate-info" class="rate">
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
